@@ -24,3 +24,14 @@ data_norm <- exprs(data_norm)
 
 #Plot the normalized dataset
 boxplot(data_norm, xlab="Samples", ylab= "Genes", main= "Normalized Microarray Plot", col="green")
+
+#Assign first 2 samples as treatment and the next 2 samples as control
+Treatment <- data_norm[,1:2]
+Control <- data_norm[,3:4]
+
+Treatment <- data_norm[,1:2]
+Control <- data_norm[,3:4]
+
+#Comparing treatment and control groups using forward change analysis
+average_treatment <- rowMeans(Treatment)
+average_control <- rowMeans(Control)
