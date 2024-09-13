@@ -35,3 +35,11 @@ Control <- data_norm[,3:4]
 #Comparing treatment and control groups using forward change analysis
 average_treatment <- rowMeans(Treatment)
 average_control <- rowMeans(Control)
+
+#Subtraction (calculate fold change)
+fold_change <- average_treatment - average_control
+
+#Any value that is +1.5 and above is upregulated, below that is down regulted
+#Up regulated gene is over expressed
+#Down reguulation is under expressed
+#Fold change > 1.5 up-regulated; < -1.5 down regulated
