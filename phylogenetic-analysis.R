@@ -5,6 +5,10 @@ library(ape)
 
 #Generate some dummy data
 #Ones in bracket together are closely related
-string text.string<- "(((((((cow, pig),whale),(bat,(lemur,human))),(robin,iguana)),coelacanth),gold_fish),shark)"
+text.string<- "(((((((cow, pig),whale),(bat,(lemur,human))),(robin,iguana)),coelacanth),gold_fish),shark);"
 
-#Read the data as a tree structure
+#Read data is tree structure
+vert.tree<-read.tree(text=text.string)
+
+#Generate a basic plot of dummy data (rooted plot)
+plot(vert.tree,no.margin=TRUE,edge.width=2,main="Phylogenetic Tree")
