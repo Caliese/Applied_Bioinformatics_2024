@@ -12,3 +12,7 @@ vert.tree<-read.tree(text=text.string)
 
 #Generate a basic plot of dummy data (rooted plot)
 plot(vert.tree,no.margin=TRUE,edge.width=2,main="Phylogenetic Tree")
+
+#Generate un-rooted plot on the dummy data -no root or start point
+#used to look at the relationship of the species as opposed to the origin
+plot(unroot(vert.tree),type="unrooted",no.margin=TRUE,lab4ut="axial", edge.width=2)
